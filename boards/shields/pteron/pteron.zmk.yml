@@ -1,0 +1,8 @@
+file_format: "1"
+id: pteron
+name: Pteron
+type: shield
+url: https://github.com/lepigabo/pteron-keyboard
+requires: [pro_micro]
+features:
+  - keys
