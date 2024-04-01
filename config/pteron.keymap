@@ -10,21 +10,51 @@
 
 #define DEFAULT  0
 #define NUM_MODS 1
-#define BT_CTRL  2
+#define GAMING  2
 
 
 / {
+  behaviors {
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp P>, <&kp P>, <&to GAMING>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
     &kp ESC    &kp N1    &kp N2     &kp N3     &kp N4    &kp N5      &kp N6    &kp N7    &kp N8     &kp N9     &kp N0    &kp BSPC     
-    &kp CAPS   &kp Q     &kp W      &kp E      &kp R     &kp T       &kp Y     &kp U     &kp I      &kp O      &kp P     &kp SQT     
-    &kp ESC    &kp A     &kp S      &kp D      &kp F     &kp G       &kp H     &kp J     &kp K      &kp L      &kp SEMI  &kp ENTER     
+    &kp CAPS   &kp Q     &kp W      &kp E      &kp R     &kp T       &kp Y     &kp U     &kp I      &kp O      &td0      &kp SQT     
+    &kp TAB    &kp A     &kp S      &kp D      &kp F     &kp G       &kp H     &kp J     &kp K      &kp L      &kp SEMI  &kp ENTER     
     &kp LSHFT  &kp Z     &kp X      &kp C      &kp V     &kp B       &kp N     &kp M     &kp COMMA  &kp DOT    &kp FSLH  &kp RSHFT     
-                         &kp LCTRL  &kp SPACE  &kp LGUI  &kp LALT    &kp RALT  &kp RGUI  &kp ENTER  &kp RCTRL     
+                         &kp LCTRL  &kp SPACE  &kp LALT  &kp LGUI    &kp RGUI  &kp RALT  &kp ENTER  &kp RCTRL     
             >;
         };
+
+        layer_1 {
+            bindings = <
+    &kp ESC    &kp N1    &kp N2     &kp N3     &kp N4    &kp N5      &kp N6    &kp N7    &kp N8     &kp N9     &kp N0    &kp BSPC     
+    &kp CAPS   &kp Q     &kp W      &kp E      &kp R     &kp T       &kp Y     &kp U     &kp I      &kp O      &td0      &kp SQT     
+    &kp TAB    &kp A     &kp S      &kp D      &kp F     &kp G       &kp H     &kp J     &kp K      &kp L      &kp SEMI  &kp ENTER     
+    &kp LSHFT  &kp Z     &kp X      &kp C      &kp V     &kp B       &kp N     &kp M     &kp COMMA  &kp DOT    &kp FSLH  &kp RSHFT     
+                         &kp LCTRL  &kp SPACE  &kp LALT  &kp LGUI    &kp RALT  &kp RGUI  &kp ENTER  &kp RCTRL     
+            >;
+        };
+
+        gaming_2 {
+            bindings = <
+    &kp ESC    &kp N1    &kp N2     &kp N3     &kp N4      &kp N5      &kp N6    &kp N7    &kp N8     &kp N9     &kp N0       &kp BSPC     
+    &kp CAPS   &kp Q     &kp W      &kp E      &kp R       &kp T       &kp Y     &kp U     &kp I      &kp O      &kp P        &kp SQT     
+    &kp TAB    &kp A     &kp S      &kp D      &kp F       &kp G       &kp H     &kp J     &kp K      &kp L      &kp SEMI     &kp ENTER     
+    &kp LSHFT  &kp Z     &kp X      &kp C      &kp V       &kp B       &kp N     &kp M     &kp COMMA  &kp DOT    &kp FSLH     &to DEFAULT     
+                         &kp LCTRL  &kp SPACE  &kp LALT    &kp LSHFT   &kp RALT  &kp RGUI  &kp ENTER  &kp RCTRL     
+            >;
+        };
+
     };
 };
