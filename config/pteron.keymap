@@ -28,6 +28,24 @@
             tapping-term-ms = <200>;
             bindings = <&kp DEL>, <&to BT_SETUP>;
         };
+        td_caps: tap_dance_3 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LBKT>, <&kp CAPS>;
+        };
+        td_bslh: tap_dance_4 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp SQT>, <&kp BSLH>;
+        };
+        td_pipe: tap_dance_5 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp MINUS>, <&kp PIPE>;
+        };
         hto: hold_tap_0 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -42,17 +60,17 @@
 
         default_layer {
             bindings = <
-    &kp ESC    &kp N1    &kp N2     &kp N3     &kp N4    &kp N5                  &kp N6    &kp N7      &kp N8     &kp N9     &kp N0    &kp BSPC     
-    &kp TAB    &kp Q     &kp W      &kp F      &kp P     &kp B                   &kp J     &kp L       &kp U      &kp Y      &kp SEMI  &kp SQT     
-    &kp CAPS   &kp A     &kp R      &kp S      &kp T     &kp G                   &kp M     &kp N       &kp E      &kp I      &kp O     &kp ENTER     
-    &kp LSHFT  &kp Z     &kp X      &kp C      &kp D     &kp V                   &kp K     &kp H       &kp COMMA  &kp DOT    &kp FSLH  &kp RSHFT     
+    &kp ESC    &kp N1    &kp N2     &kp N3     &kp N4    &kp N5                  &kp N6    &kp N7      &kp N8     &kp N9     &kp N0    &kp EQUAL     
+    &kp TAB    &kp Q     &kp W      &kp F      &kp P     &kp B                   &kp J     &kp L       &kp U      &kp Y      &kp SEMI  &td_bslh    
+    &td_caps   &kp A     &kp R      &kp S      &kp T     &kp G                   &kp M     &kp N       &kp E      &kp I      &kp O     &td_pipe
+    &kp RBKT   &kp Z     &kp X      &kp C      &kp D     &kp V                   &kp K     &kp H       &kp COMMA  &kp DOT    &kp FSLH  &kp GRAVE     
                          &kp LCTRL  &kp SPACE  &kp LALT  &hto LSHIFT NAVIGATION  &kp RGUI  &td_gaming  &kp ENTER  &td_bt     
             >;
         };
 
         navigation_1 {
             bindings = <
-    &kp ESC    &kp F1    &kp F2     &kp F3     &kp F4     &kp F5      &kp F6             &kp F7     &kp F8     &kp F9     &kp F10    &kp BSPC     
+    &kp ESC    &kp F1    &kp F2     &kp F3     &kp F4     &kp F5      &kp F6             &kp F7     &kp F8     &kp F9     &kp F10   &kp BSPC     
     &kp TAB    &kp F11   &kp F12    &kp E      &kp R      &kp T       &kp Y              &kp U      &kp MINUS  &kp EQUAL  &kp SEMI  &kp SQT     
     &kp CAPS   &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &kp G       &kp GRAVE          &kp E      &kp LBKT   &kp RBKT   &kp BSLH  &kp ENTER     
     &kp LSHFT  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END    &kp B       &kp N              &kp M      &kp COMMA  &kp DOT    &kp FSLH  &kp RSHFT     
