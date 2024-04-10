@@ -65,7 +65,7 @@
     &kp TAB    &kp Q     &kp W      &kp F      &kp P     &kp B                   &kp J     &kp L       &kp U      &kp Y      &kp SEMI  &td_bslh    
     &td_caps   &kp A     &kp R      &kp S      &kp T     &kp G                   &kp M     &kp N       &kp E      &kp I      &kp O     &td_pipe
     &kp RBKT   &kp Z     &kp X      &kp C      &kp D     &kp V                   &kp K     &kp H       &kp COMMA  &kp DOT    &kp FSLH  &kp GRAVE     
-                         &kp LCTRL  &kp SPACE  &kp LALT  &hto LSHIFT NAVIGATION  &kp RGUI  &td_gaming  &kp ENTER  &lt BT_SETUP DEL     
+                         &kp LCTRL  &kp SPACE  &kp LALT  &hto LSHIFT NAVIGATION  &kp RGUI  &kp ENTER   &kp BSPC   &lt BT_SETUP DEL     
             >;
         };
 
@@ -94,7 +94,7 @@
     &kp ESC    &kp N1    &kp N2     &kp N3     &kp N4      &kp N5     &bt BT_SEL 0       &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4    &out OUT_BLE     
     &kp TAB    &kp Q     &kp W      &kp E      &kp R       &kp T      &bt BT_DISC 0      &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4   &out OUT_USB     
     &kp CAPS   &kp A     &kp S      &kp D      &kp F       &kp G      &kp H              &bt BT_PRV     &kp K          &kp L          &bt BT_NXT      &kp ENTER     
-    &kp LSHFT  &kp Z     &kp X      &kp C      &kp V       &kp B      &kp N              &bt BT_CLR     &kp COMMA      &kp DOT        &bt BT_CLR_ALL  &out OUT_TOG    
+    &kp LSHFT  &kp Z     &kp X      &kp C      &kp V       &kp B      &kp N              &bt BT_CLR     &kp COMMA      &kp DOT        &bt BT_CLR_ALL  &to GAMING
                          &kp LCTRL  &kp SPACE  &kp LALT    &kp LSHFT  &hto RGUI DEFAULT  &kp BSPC       &kp ENTER      &kp DEL     
             >;
         };
