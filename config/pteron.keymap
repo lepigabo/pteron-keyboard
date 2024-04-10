@@ -64,7 +64,7 @@
     &kp TAB    &kp Q     &kp W      &kp F      &kp P     &kp B                   &kp J     &kp L       &kp U      &kp Y      &kp SEMI  &td_bslh    
     &td_caps   &kp A     &kp R      &kp S      &kp T     &kp G                   &kp M     &kp N       &kp E      &kp I      &kp O     &td_pipe
     &kp RBKT   &kp Z     &kp X      &kp C      &kp D     &kp V                   &kp K     &kp H       &kp COMMA  &kp DOT    &kp FSLH  &kp GRAVE     
-                         &kp LCTRL  &kp SPACE  &kp LALT  &hto LSHIFT NAVIGATION  &kp RGUI  &td_gaming  &kp ENTER  &td_bt     
+                         &kp LCTRL  &kp SPACE  &kp LALT  &hto LSHIFT NAVIGATION  &kp RGUI  &td_gaming  &kp ENTER  &lt BT_SETUP DEL     
             >;
         };
 
