@@ -16,61 +16,65 @@
 
 
 / {
-  behaviors {
-        td_gaming: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp BSPC>, <&to GAMING>;
-        };
-        td_bt: tap_dance_2 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp DEL>, <&to BT_SETUP>;
-        };
-        td_caps: tap_dance_3 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LBKT>, <&kp CAPS>;
-        };
-        td_bslh: tap_dance_4 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp SQT>, <&kp BSLH>;
-        };
-        td_pipe: tap_dance_5 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp MINUS>, <&kp PIPE>;
-        };
-        hto: hold_tap_0 {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&kp>, <&to>;
-        };
+    behaviors {
+      td_gaming: tap_dance_0 {
+          compatible = "zmk,behavior-tap-dance";
+          #binding-cells = <0>;
+          tapping-term-ms = <200>;
+          bindings = <&kp BSPC>, <&to GAMING>;
+      };
+      td_bt: tap_dance_2 {
+          compatible = "zmk,behavior-tap-dance";
+          #binding-cells = <0>;
+          tapping-term-ms = <200>;
+          bindings = <&kp DEL>, <&to BT_SETUP>;
+      };
+      td_caps: tap_dance_3 {
+          compatible = "zmk,behavior-tap-dance";
+          #binding-cells = <0>;
+          tapping-term-ms = <200>;
+          bindings = <&kp LBKT>, <&kp CAPS>;
+      };
+      td_bslh: tap_dance_4 {
+          compatible = "zmk,behavior-tap-dance";
+          #binding-cells = <0>;
+          tapping-term-ms = <200>;
+          bindings = <&kp SQT>, <&kp BSLH>;
+      };
+      td_pipe: tap_dance_5 {
+          compatible = "zmk,behavior-tap-dance";
+          #binding-cells = <0>;
+          tapping-term-ms = <200>;
+          bindings = <&kp MINUS>, <&kp PIPE>;
+      };
+      hto: hold_tap_0 {
+          compatible = "zmk,behavior-hold-tap";
+          #binding-cells = <2>;
+          flavor = "hold-preferred";
+          tapping-term-ms = <200>;
+          bindings = <&kp>, <&to>;
+      };
     };
 
     macros {
-      ZMK_MACRO(enie_minuscula,
+      enie_minuscula: enie_minuscula {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
         wait-ms = <30>;
         tap-ms = <40>;
         bindings = <&macro_press   &kp LALT>,
                    <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N1>,
                    <&macro_release &kp LALT>;
-      );
-      ZMK_MACRO(enie_mayuscula,
+      };
+      enie_mayuscula: enie_mayuscula {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
         wait-ms = <30>;
         tap-ms = <40>;
         bindings = <&macro_press   &kp LALT>,
                    <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N9>,
                    <&macro_release &kp LALT>;
-      );
+      };      
     };
 
     keymap {
