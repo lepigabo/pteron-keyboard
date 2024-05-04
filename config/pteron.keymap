@@ -48,11 +48,23 @@
           tapping-term-ms = <200>;
           bindings = <&kp MINUS>, <&kp PIPE>;
       };
-      td_tog: tap_dance_toggle {
+      td_nav: tap_dance_nav {
           compatible = "zmk,behavior-tap-dance";
           #binding-cells = <0>;
           tapping-term-ms = <200>;
-          bindings = <&kp>, <&tog>;
+          bindings = <&kp LSHIFT>, <&tog NAV>;
+      };
+      td_not_nav: tap_dance_not_nav {
+          compatible = "zmk,behavior-tap-dance";
+          #binding-cells = <0>;
+          tapping-term-ms = <200>;
+          bindings = <&kp LCTRL>, <&tog NAV>;
+      };
+      td_not_gaming: tap_dance_not_gaming {
+          compatible = "zmk,behavior-tap-dance";
+          #binding-cells = <0>;
+          tapping-term-ms = <200>;
+          bindings = <&kp LCTRL>, <&tog GAMING>;
       };
 
       hto: hold_tap_0 {
@@ -94,7 +106,7 @@
 &kp TAB   &kp Q   &kp W      &kp F      &kp P               &kp B         &kp J     &kp L       &kp U      &kp Y             &kp SEMI  &td_bslh    
 &td_caps  &kp A   &kp R      &kp S      &kp T               &kp G         &kp M     &kp N       &kp E      &kp I             &kp O     &td_pipe
 &kp RBKT  &kp Z   &kp X      &kp C      &kp D               &kp V         &kp K     &kp H       &kp COMMA  &kp DOT           &kp FSLH  &kp GRAVE     
-                  &kp LCTRL  &kp SPACE  &td_tog LSHIFT NAV  &kp LALT      &kp RGUI  &kp ENTER   &kp BSPC   &lt BT_SETUP DEL     
+                  &kp LCTRL  &kp SPACE  &td_nav             &kp LALT      &kp RGUI  &kp ENTER   &kp BSPC   &lt BT_SETUP DEL     
             >;
         };
 
@@ -104,7 +116,7 @@
 &kp TAB   &kp Q   &kp W      &kp E      &kp R               &kp T         &kp Y     &kp U       &kp I      &kp O             &kp P     &td_bslh    
 &td_caps  &kp A   &kp S      &kp D      &kp F               &kp G         &kp H     &kp J       &kp K      &kp L             &kp SEMI  &td_pipe
 &kp RBKT  &kp Z   &kp X      &kp C      &kp V               &kp B         &kp N     &kp M       &kp COMMA  &kp DOT           &kp FSLH  &kp GRAVE     
-                  &kp LCTRL  &kp SPACE  &td_tog LSHIFT NAV  &kp LALT      &kp RGUI  &kp ENTER   &kp BSPC   &lt BT_SETUP DEL     
+                  &kp LCTRL  &kp SPACE  &td_nav             &kp LALT      &kp RGUI  &kp ENTER   &kp BSPC   &lt BT_SETUP DEL     
             >;
         };
 
@@ -114,7 +126,7 @@
 &trans  &kp PG_UP  &kp HOME            &kp UP     &kp END    &trans        &trans  &trans  &trans  &trans   &trans   &kp F12
 &trans  &kp PG_DN  &kp LEFT            &kp DOWN   &kp RIGHT  &trans        &trans  &trans  &trans  &trans   &trans   &trans
 &trans  &trans     &kp LC(X)           &kp LC(C)  &trans     &kp LC(V)     &trans  &trans  &trans  &trans   &trans   &trans     
-                   &td_tog LCTRL NAV   &trans     &trans     &trans        &trans  &trans  &trans  &trans     
+                   &td_not_nav         &trans     &trans     &trans        &trans  &trans  &trans  &trans     
             >;
         };
 
@@ -124,13 +136,13 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans            &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans            &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans            &trans  &trans
-                &trans  &trans  &trans  &trans    &trans  &trans  &trans  &td_tog DEL DEFAULT     
+                &td_not_gaming  &trans  &trans  &trans    &trans  &trans  &trans  &trans      
             >;
         };
 
         bt_setup {
             bindings = <
-&none           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_DISC 0  &bt BT_DISC 1    &bt BT_DISC 2    &bt BT_DISC 3  &bt BT_DISC 4  &to GAMING
+&none           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_DISC 0  &bt BT_DISC 1    &bt BT_DISC 2    &bt BT_DISC 3  &bt BT_DISC 4  &tog GAMING
 &bt BT_CLR      &none         &none         &out OUT_BLE  &none         &none           &none          &none            &none            &none          &none          &to DEFAULT     
 &none           &none         &bt BT_PRV    &out OUT_USB  &bt BT_NXT    &none           &none          &enie_minuscula  &enie_mayuscula  &none          &none          &to QWERTY
 &bt BT_CLR_ALL  &none         &none         &none         &none         &none           &none          &none            &none            &none          &none          &none
