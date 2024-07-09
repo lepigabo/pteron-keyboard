@@ -111,9 +111,9 @@
         default_layer {
             bindings = <
 &kp ESC   &kp N1  &kp N2     &kp N3     &kp N4              &kp N5        &kp N6    &kp N7      &kp N8     &kp N9            &kp N0    &kp EQUAL     
-&kp TAB   &kp Q   &kp W      &kp F      &kp P               &kp B         &kp J     &kp L       &kp U      &kp Y             &kp SEMI  &td_bslh    
-&td_caps  &kp A   &kp R      &kp S      &kp T               &kp G         &kp M     &kp N       &kp E      &kp I             &kp O     &td_pipe
-&kp RBKT  &kp Z   &kp X      &kp C      &kp D               &kp V         &kp K     &kp H       &kp COMMA  &kp DOT           &kp FSLH  &kp GRAVE     
+&kp TAB   &kp Q   &kp W      &kp E      &kp R               &kp T         &kp Y     &kp U       &kp I      &kp O             &kp P     &td_bslh    
+&td_caps  &kp A   &kp S      &kp D      &kp F               &kp G         &kp H     &kp J       &kp K      &kp L             &kp SEMI  &td_pipe
+&kp RBKT  &kp Z   &kp X      &kp C      &kp V               &kp B         &kp N     &kp M       &kp COMMA  &kp DOT           &kp FSLH  &kp GRAVE     
                   &kp LCTRL  &kp SPACE  &td_nav             &kp LALT      &kp RGUI  &kp ENTER   &kp BSPC   &lt BT_SETUP DEL     
             >;
         };
@@ -121,9 +121,9 @@
         qwerty {
             bindings = <
 &kp ESC   &kp N1  &kp N2     &kp N3     &kp N4              &kp N5        &kp N6    &kp N7      &kp N8     &kp N9            &kp N0    &kp EQUAL     
-&kp TAB   &kp Q   &kp W      &kp E      &kp R               &kp T         &kp Y     &kp U       &kp I      &kp O             &kp P     &td_bslh    
-&td_caps  &kp A   &kp S      &kp D      &kp F               &kp G         &kp H     &kp J       &kp K      &kp L             &kp SEMI  &td_pipe
-&kp RBKT  &kp Z   &kp X      &kp C      &kp V               &kp B         &kp N     &kp M       &kp COMMA  &kp DOT           &kp FSLH  &kp GRAVE     
+&kp TAB   &kp Q   &kp W      &kp F      &kp P               &kp B         &kp J     &kp L       &kp U      &kp Y             &kp SEMI  &td_bslh    
+&td_caps  &kp A   &kp R      &kp S      &kp T               &kp G         &kp M     &kp N       &kp E      &kp I             &kp O     &td_pipe
+&kp RBKT  &kp Z   &kp X      &kp C      &kp D               &kp V         &kp K     &kp H       &kp COMMA  &kp DOT           &kp FSLH  &kp GRAVE     
                   &kp LCTRL  &kp SPACE  &td_nav             &kp LALT      &kp RGUI  &kp ENTER   &kp BSPC   &lt BT_SETUP DEL     
             >;
         };
