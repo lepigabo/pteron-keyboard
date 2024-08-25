@@ -140,11 +140,11 @@
 
         gaming {
             bindings = <
-&trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans     
-&trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                &td_not_gaming  &trans  &trans  &trans    &trans  &trans  &trans  &trans      
+&trans  &trans  &trans     &trans     &trans      &trans      &trans  &trans  &trans  &trans  &trans  &tog GAMING     
+&trans  &trans  &trans     &trans     &trans      &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans     &trans      &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&kp F5  &trans  &trans     &trans     &trans      &trans      &trans  &trans  &trans  &trans  &trans  &trans
+                &kp LCTRL  &kp SPACE  &kp LSHIFT  &kp LALT    &trans  &trans  &trans  &trans      
             >;
         };
 
