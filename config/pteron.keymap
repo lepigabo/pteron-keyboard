@@ -168,7 +168,7 @@
 
         gaming {
             bindings = <
-&trans  &trans  &trans        &kp V      &trans        &trans               &trans      &trans      &F9         &trans       &kp V       &double_click
+&trans  &trans  &trans        &kp V      &trans        &trans               &trans      &trans      &kp F9      &trans       &kp V       &double_click
 &trans  &kp W   &kp LA(LEFT)  &kp UP     &kp LA(RIGHT) &trans               &kp F1      &kp F2      &kp F3      &kp F4       &kp F5      &kp N
 &trans  &kp E   &kp LEFT      &kp DOWN   &kp RIGHT     &trans               &kp LA(F1)  &kp LA(F2)  &kp LA(F3)  &kp LA(F4)   &kp LA(F5)  &kp M
 &kp F5  &trans  &trans        &trans     &trans        &trans               &kp LC(F1)  &kp LC(F2)  &kp LC(F3)  &kp LC(F4)   &kp LC(F5)  &kp B
