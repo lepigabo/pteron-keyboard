@@ -126,8 +126,8 @@
       double_click: double_click {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        wait-ms = <200>;
-        tap-ms = <200>;
+        wait-ms = <50>;
+        tap-ms = <50>;
         bindings = <&macro_tap   &mkp LCLK>,
                    <&macro_tap   &mkp LCLK>;
       };
@@ -168,11 +168,11 @@
 
         gaming {
             bindings = <
-&trans  &trans  &trans        &kp V      &trans        &trans               &trans      &trans      &kp F9      &trans       &kp V       &double_click
-&trans  &kp W   &kp LA(LEFT)  &kp UP     &kp LA(RIGHT) &trans               &kp F1      &kp F2      &kp F3      &kp F4       &kp F5      &kp N
-&trans  &kp E   &kp LEFT      &kp DOWN   &kp RIGHT     &trans               &kp LA(F1)  &kp LA(F2)  &kp LA(F3)  &kp LA(F4)   &kp LA(F5)  &kp M
-&kp F5  &trans  &trans        &trans     &trans        &trans               &kp LC(F1)  &kp LC(F2)  &kp LC(F3)  &kp LC(F4)   &kp LC(F5)  &kp B
-                &td_approach  &td_jump   &kp LCTRL     &td_unlock_target    &trans      &trans      &trans      &tog GAMING      
+&trans  &trans  &trans        &kp V      &trans        &trans               &trans      &trans      &kp F9      &trans       &trans      &tog GAMING
+&trans  &kp W   &kp LA(LEFT)  &kp UP     &kp LA(RIGHT) &trans               &kp F1      &kp F2      &kp F3      &kp F4       &kp F5      &trans
+&trans  &kp E   &kp LEFT      &kp DOWN   &kp RIGHT     &trans               &kp LA(F1)  &kp LA(F2)  &kp LA(F3)  &kp LA(F4)   &kp LA(F5)  &trans
+&kp F5  &trans  &trans        &trans     &trans        &trans               &kp LC(F1)  &kp LC(F2)  &kp LC(F3)  &kp LC(F4)   &kp LC(F5)  &kp V
+                &td_approach  &td_jump   &kp LCTRL     &td_unlock_target    &kp N       &kp B       &kp M       &double_click
             >;
         };
 
